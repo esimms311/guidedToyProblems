@@ -1,19 +1,13 @@
 describe('guidedToyProblems', function () {
+  beforeEach(function () {
+    spyOn(console, 'log')
+  })
     describe('countDown', function () {
 		it('should exist', function () {
 			expect(countDown).toBeDefined();
 		})
-		it('should log each number', function () {
-      expect(console.log).toHaveBeenCalledWith(10);
-      expect(console.log).toHaveBeenCalledWith(9);
-      expect(console.log).toHaveBeenCalledWith(8);
-      expect(console.log).toHaveBeenCalledWith(7);
-      expect(console.log).toHaveBeenCalledWith(6);
-      expect(console.log).toHaveBeenCalledWith(5);
-      expect(console.log).toHaveBeenCalledWith(4);
-      expect(console.log).toHaveBeenCalledWith(3);
-      expect(console.log).toHaveBeenCalledWith(2);
-			expect(console.log).toHaveBeenCalledWith(1);
+		it('should concatenate each number', function () {
+      expect(countDown()).toEqual('10987654321');
 		})
 	})
 
