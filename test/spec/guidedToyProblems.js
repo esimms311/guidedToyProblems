@@ -1,7 +1,5 @@
 describe('guidedToyProblems', function () {
-  beforeEach(function () {
-    spyOn(console, 'log')
-  })
+
     describe('countDown', function () {
 		it('should exist', function () {
 			expect(countDown).toBeDefined();
